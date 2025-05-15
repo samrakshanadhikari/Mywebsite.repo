@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    margin: 0.5rem 0;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 16px;
+  }
+  
+  a.button {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.6rem 1.2rem;
+    background-color: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  a.button:hover {
+    background-color: #4338ca;
+  }
+  
+  img.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    margin: 2rem 0;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e0e7ff;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .education, .project {
+    background: linear-gradient(90deg, #eef2ff, #c7d2fe)}
+  
+
+
