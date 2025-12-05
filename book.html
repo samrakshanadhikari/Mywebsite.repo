@@ -1,69 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bookstore App</title>
+  <title>📚 Samrakshyan's Bookstore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="book.css" />
-  <style>
-    /* Add these styles to book.css or here directly */
-    #intro {
-      padding: 2rem;
-      background: #f4f4f8;
-      text-align: center;
-      font-family: 'Georgia', serif;
-      animation: fadeIn 2s ease-in;
-    }
-    #intro h2 {
-      font-size: 2em;
-      margin-bottom: 0.5rem;
-      color: #444;
-    }
-    #intro p {
-      font-size: 1.1em;
-      margin: 0.5rem auto;
-      max-width: 800px;
-      color: #555;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>📚 Bookstore</h1>
+    <h1>📚 Samrakshyan's Bookstore</h1>
     <nav>
       <button id="viewCart">🛒 Cart (<span id="cartCount">0</span>)</button>
     </nav>
   </header>
 
   <main>
-    <!-- 🌟 Intro Section -->
+    <!-- Intro Section -->
     <section id="intro">
-        <h2>Welcome to <span class="highlight">Samrakshyan’s World</span></h2>
-        <p class="tagline">Where Arts, Music, Books & Infinite Curiosity Collide</p>
-        
-        <p class="identity">
-          A name, a void, a rebel, a neurotic, a leader, a nothing, a student, a poet—above all, a <span class="emphasis">lover</span>.
-        </p>
+      <h2>Welcome to <span class="highlight">Samrakshyan's World</span></h2>
+      <p class="tagline">Where Arts, Music, Books & Infinite Curiosity Collide</p>
       
-        <p class="about">
-          I am enchanted by the minds of writers and the soul of literature.<br>
-          These are not just books—they are <span class="fadein-word">portals</span>, <span class="fadein-word delay-1">teachers</span>, <span class="fadein-word delay-2">mirrors</span>.
-        </p>
-      
-        <p class="about">
-          A voracious reader, I dive deeply into realms of <span class="highlight">literature</span>, <span class="highlight">art</span>, <span class="highlight">politics</span>, and <span class="highlight">technology</span>—forever exploring, always evolving.
-        </p>
-      
-        <button onclick="scrollToBooks()">Explore My Bookshelf</button>
-      </section>
-      
+      <p class="identity">
+        A name, a void, a rebel, a neurotic, a leader, a nothing, a student, a poet—above all, a <span class="emphasis">lover</span>.
+      </p>
     
+      <p class="about">
+        I am enchanted by the minds of writers and the soul of literature.<br>
+        These are not just books—they are <span class="fadein-word">portals</span>, <span class="fadein-word delay-1">teachers</span>, <span class="fadein-word delay-2">mirrors</span>.
+      </p>
+    
+      <p class="about">
+        A voracious reader, I dive deeply into realms of <span class="highlight">literature</span>, <span class="highlight">art</span>, <span class="highlight">politics</span>, and <span class="highlight">technology</span>—forever exploring, always evolving.
+      </p>
+    
+      <button id="scrollButton">✨ Explore My Bookshelf</button>
+    </section>
 
     <div id="bookList" class="book-list"></div>
   </main>
@@ -72,7 +44,7 @@
   <div id="cartModal" class="modal hidden">
     <div class="modal-content">
       <span id="closeCart" class="close">&times;</span>
-      <h2>Your Cart</h2>
+      <h2>🛒 Your Cart</h2>
       <ul id="cartItems"></ul>
       <p>Total: $<span id="cartTotal">0.00</span></p>
     </div>

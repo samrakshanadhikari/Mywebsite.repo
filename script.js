@@ -63,7 +63,7 @@ const books = [
         image: "https://images.booksense.com/images/100/048/9789358048100.jpg"
       },
     {
-      id: 9,
+      id: 18,
       title: "1984",
       author: "George Orwell",
       price: 9.99,
@@ -187,18 +187,11 @@ function renderBooks() {
         bookList.appendChild(div);
     });
 }
-document.addEventListener('DOMContentLoaded', function() {
-    function scrollToBooks() {
-      document.querySelector('.book-list')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  
-    // Optionally, add event listeners or triggers for the function
-    // For example, you can attach it to a button click or some other event
-    const scrollButton = document.querySelector('#scrollButton');
-    if (scrollButton) {
-      scrollButton.addEventListener('click', scrollToBooks);
-    }
-  });
+
+// Global function for scrolling to books section
+function scrollToBooks() {
+  document.querySelector('.book-list')?.scrollIntoView({ behavior: 'smooth' });
+}
   
 
 function addToCart(bookId) {
@@ -235,8 +228,9 @@ function hideCart() {
 }
 
 // Event Listeners
-document.getElementById('viewCart').addEventListener('click', showCart);
-document.getElementById('closeCart').addEventListener('click', hideCart);
+document.getElementById('viewCart')?.addEventListener('click', showCart);
+document.getElementById('closeCart')?.addEventListener('click', hideCart);
+document.getElementById('scrollButton')?.addEventListener('click', scrollToBooks);
 
 // Initialize
 renderBooks();

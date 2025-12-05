@@ -3,98 +3,730 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Samrakshyan's Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Samrakshyan Adhikari | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="book.css" />
       </head>
-      
 <body>
-  <header>
-    <h1>Hello, I'm Samrakshyan!</h1>
-    <h2>Want to know me?</h2>
-    <h3>Let's get started</h3>
-  </header>
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
 
-  <main>
-    <div class="section">
-      <p>This is how you can know about me.</p>
-      <p>I love algorithms, books, arts, and music.</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">⚡</span>
+      <span class="brand-text">Samrakshyan</span>
     </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-    <div class="section">
-      <a class="button" href="https://www.linkedin.com/in/samrakshyan-adhikari-625473269/" target="_blank">LinkedIn</a>
-      <a class="button" href="https://github.com/samrakshanadhikari" target="_blank">GitHub</a>
-      <a class="button" href="/hello.html">Next Webpage</a>
-      <a class="button" href="/diagnose.html" target="_blank">Read My Research</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">
+          <span class="name-highlight">Samrakshyan</span>
+          <span class="name-last">Adhikari</span>
+        </h1>
+        <div class="typing-container">
+          <span class="static-text">I'm a </span>
+          <span class="dynamic-text" id="typingText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-description">
+          AI Research Fellow at Algoverse • Researching ML for wildfire prediction & medical imaging 
+          at Texas State University • Building intelligent systems that make a difference.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/samrakshyan-adhikari-625473269/" target="_blank" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/samrakshanadhikari" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:samrakshanadhikari@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="image-wrapper">
+          <img id="heroImage" src="462963360_1992908311145937_1340848373130107651_n (1).jpg" alt="Samrakshyan Adhikari">
+          <div class="image-decoration"></div>
+        </div>
+        <div class="floating-card card-1">
+          <i class="fas fa-brain"></i>
+          <span>AI Fellow</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fas fa-fire"></i>
+          <span>Wildfire ML</span>
+        </div>
+        <div class="floating-card card-3">
+          <i class="fas fa-graduation-cap"></i>
+          <span>4.0 GPA</span>
+        </div>
+      </div>
     </div>
-
-    <img id="heroImage" class="hero-image" src="462963360_1992908311145937_1340848373130107651_n (1).jpg" alt="Personal Photo of Samrakshyan">
-
-    <div class="section education">
-      <h3>🎓 Education</h3>
-      <p><strong>Texas State University</strong><br>
-      Bachelor of Science in Computer Science</p>
-      <p>📜 <strong>Achievements:</strong> 3x Dean’s List | 4.0 GPA</p>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>Scroll Down</span>
     </div>
+  </section>
 
-    <div class="section">
-      <h3>🛠️ Projects & Research</h3>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead">I'm a Computer Science student and AI researcher with a passion for solving complex real-world problems through machine learning and elegant code.</p>
+          <p>Selected globally as an <strong>Algoverse AI Research Fellow</strong> in a program directed by OpenAI and Meta researchers. Currently conducting cutting-edge research in wildfire prediction and medical imaging AI at Texas State University.</p>
+          <p>I love algorithms, books, arts, and music. My journey in tech is driven by curiosity and a desire to create meaningful impact through technology.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="4.0">0</span>
+              <span class="stat-label">GPA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Research Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="5">0</span>
+              <span class="stat-label">Full-Stack Apps</span>
+            </div>
+          </div>
+        </div>
+        <div class="education-card">
+          <div class="edu-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="edu-content">
+            <h3>Texas State University</h3>
+            <p class="degree">B.S. Computer Science (Computer Engineering) | Honors College</p>
+            <p class="grad-date">Expected Graduation: May 2027</p>
+            <div class="achievements">
+              <span class="badge"><i class="fas fa-award"></i> President's Honor Scholarship</span>
+              <span class="badge"><i class="fas fa-star"></i> Dean's List (All Semesters)</span>
+              <span class="badge"><i class="fas fa-trophy"></i> 4.0 GPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="project">
-        <h4>📊 Medical Diagnosis Research</h4>
-        <p>Currently conducting research with Dr. Farias Mylene at Texas State University.</p>
-        <p><strong>Focus:</strong> Osteoporosis screening using EfficientNet and CNN on complete and cropped facial panoramic radiography images.</p>
-        <p><strong>Tech:</strong> Machine Learning, CNNs, EfficientNet, Medical Imaging.</p>
-        <p><em>This is an ongoing research project with promising results.</em></p>
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Experience</span>
+        <h2 class="section-title">Research & Work</h2>
+      </div>
       
-        <div style="margin: 1rem 0;">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/FqsvgFTQv8w?si=Uq_eYGP-BHC9ZqU2" 
-                  title="YouTube video player" frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen></iframe>
+      <div class="experience-timeline">
+        <!-- Algoverse Fellowship -->
+        <div class="experience-card featured-experience">
+          <div class="exp-badge">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>AI Research Fellow</h3>
+              <span class="exp-company">Algoverse AI Research Program</span>
+              <span class="exp-meta">
+                <i class="fas fa-calendar"></i> Aug 2025 – Present
+                <i class="fas fa-globe"></i> Global AI Research Collective
+              </span>
+            </div>
+            <p class="exp-description">
+              Selected among top students <strong>worldwide</strong> for a prestigious research program directed by <strong>OpenAI and Meta scientists</strong>. Working under the mentorship of Margaret on cutting-edge AI/LLM research.
+            </p>
+            <ul class="exp-highlights">
+              <li>Conducting applied research in Large Language Models (LLMs), focusing on evaluation, fine-tuning, and real-world applications</li>
+              <li>Collaborating with international peers on reproducible research code and preparing manuscripts for publication</li>
+              <li>Exploring advanced techniques in generative AI and model optimization</li>
+            </ul>
+            <div class="exp-tech">
+              <span>LLMs</span>
+              <span>Fine-tuning</span>
+              <span>PyTorch</span>
+              <span>Research</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wildfire Research -->
+        <div class="experience-card">
+          <div class="exp-badge wildfire">
+            <i class="fas fa-fire"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Research Intern – AI for Wildfire Prediction</h3>
+              <span class="exp-company">Dr. Cho's Lab, Texas State University</span>
+              <span class="exp-meta">
+                <i class="fas fa-calendar"></i> Jun 2025 – Present
+                <i class="fas fa-map-marker-alt"></i> San Marcos, TX
+              </span>
+            </div>
+            <p class="exp-description">
+              Developing machine learning pipelines for wildfire susceptibility mapping using deep learning and remote sensing data.
+            </p>
+            <ul class="exp-highlights">
+              <li>Organized and cleaned large-scale geospatial datasets (50+ events) of California, ensuring metadata consistency for reproducible ML workflows</li>
+              <li>Developed wildfire susceptibility mapping pipeline using <strong>U-Net</strong>, remote sensing data (MODIS, GRIDMET, NLCD), and PyTorch</li>
+              <li>Implemented balanced sampling, metadata-driven preprocessing, and threshold tuning to improve fairness and IoU</li>
+              <li>Produced interpretable probability maps by overlaying environmental variables for real-world decision-making</li>
+              <li>Scaled pipeline with <strong>Docker + GitHub Actions</strong>, enabling reproducibility and production-readiness</li>
+            </ul>
+            <div class="exp-tech">
+              <span>U-Net</span>
+              <span>PyTorch</span>
+              <span>Remote Sensing</span>
+              <span>Docker</span>
+              <span>Google Earth Engine</span>
+            </div>
+            <div class="exp-links">
+              <a href="https://github.com/samrakshanadhikari/Wildfire-prediction" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
         </div>
       
-        <a class="button" href="https://github.com/samrakshanadhikari" target="_blank">View My Code</a>
-        <a class="button" href="/diagnose.html" target="_blank">Read more and see how you can contribute</a>
+        <!-- Osteoporosis Research -->
+        <div class="experience-card">
+          <div class="exp-badge medical">
+            <i class="fas fa-x-ray"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Research Assistant – Osteoporosis Diagnosis</h3>
+              <span class="exp-company">Dr. Farias Mylene, Texas State University</span>
+              <span class="exp-meta">
+                <i class="fas fa-calendar"></i> Jan 2024 – May 2024
+                <i class="fas fa-map-marker-alt"></i> San Marcos, TX
+              </span>
+            </div>
+            <p class="exp-description">
+              Developed AI models for osteoporosis screening using facial panoramic radiography images.
+            </p>
+            <ul class="exp-highlights">
+              <li>Prepared and validated radiographic datasets with consistent metadata/annotations to reduce noise in training pipelines</li>
+              <li>Trained <strong>ResNet-18 CNN</strong> on 750 X-rays, achieving <strong>94% accuracy</strong>; evaluated with F1-score, AUC, and confusion matrices</li>
+              <li>Applied PyTorch pipelines ensuring reproducible experiments aligned with clinical standards</li>
+            </ul>
+            <div class="exp-tech">
+              <span>ResNet-18</span>
+              <span>CNNs</span>
+              <span>Medical Imaging</span>
+              <span>PyTorch</span>
+            </div>
+            <div class="exp-links">
+              <a href="https://github.com/samrakshanadhikari/Osteoporosis_diagnose_repo-" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="diagnose.html" target="_blank" class="btn btn-small btn-outline">
+                <i class="fas fa-external-link-alt"></i> Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
       </div>
 
-      <div class="project">
-        <h4>📚 Interactive Bookstore Web App</h4>
-        <p>Explore my interactive Bookstore web app where you can browse and purchase books.</p>
-        <p><strong>Tech Used:</strong> HTML, CSS, JavaScript, Firebase</p>
-        <a class="button" href="https://github.com/samrakshanadhikari/bookstore-app" target="_blank">View My Code</a>
-        <a class="button" href="book.html" target="_blank">See Bookstore App</a>
+      <!-- Research Video -->
+      <div class="project-card featured">
+        <div class="project-media">
+          <!-- Video thumbnail with play button (works locally) -->
+          <a href="https://www.youtube.com/watch?v=FqsvgFTQv8w" target="_blank" class="video-thumbnail" id="videoThumbnail">
+            <img src="https://img.youtube.com/vi/FqsvgFTQv8w/maxresdefault.jpg" alt="Research Video Thumbnail">
+            <div class="play-button">
+              <i class="fas fa-play"></i>
+            </div>
+            <span class="video-label">Click to Watch on YouTube</span>
+          </a>
+          <!-- Embedded video (works when hosted) -->
+          <iframe 
+            id="youtubeEmbed"
+            src="https://www.youtube.com/embed/FqsvgFTQv8w?si=Uq_eYGP-BHC9ZqU2&origin=https://samrakshanadhikari.github.io" 
+            title="Research Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Research</span>
+          <h3>Medical Diagnosis with AI</h3>
+          <p>Osteoporosis screening using EfficientNet and CNN on facial panoramic radiography images. Achieved 94% accuracy with ResNet-18 on 750 X-ray images.</p>
+          <div class="tech-stack">
+            <span>Machine Learning</span>
+            <span>CNNs</span>
+            <span>ResNet-18</span>
+            <span>Medical Imaging</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/samrakshanadhikari/Osteoporosis_diagnose_repo-" target="_blank" class="btn btn-small">
+              <i class="fab fa-github"></i> Code
+            </a>
+            <a href="diagnose.html" target="_blank" class="btn btn-small btn-outline">
+              <i class="fas fa-external-link-alt"></i> Learn More
+            </a>
+          </div>
+        </div>
       </div>
 
-    </div>
+      <div class="projects-grid">
+        <!-- DisAID Project -->
+        <div class="project-card">
+          <div class="project-preview disaster">
+            <div class="preview-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">AI App</span>
+            <h3>DisAID - Disaster Relief AI</h3>
+            <p>AI-powered disaster relief platform with Google Gemini AI for intelligent emergency classification and real-time location services.</p>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>Google Gemini AI</span>
+              <span>Google Maps</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/samrakshanadhikari/RescueOps" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://disaid-frontend.onrender.com/" target="_blank" class="btn btn-small btn-outline">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <div class="section skills">
-      <h3>💼 Skills</h3>
-      <p><strong>Programming Languages:</strong> Python, JavaScript, C++, HTML, CSS</p>
-      <p><strong>Technologies & Tools:</strong> Git, Firebase, React, TensorFlow, PyTorch</p>
-      <p><strong>Specialties:</strong> Machine Learning, Full-Stack Development, Web Apps, Image Processing</p>
-    </div>
-  </main>
+        <!-- E-Commerce Project -->
+        <div class="project-card">
+          <div class="project-preview ecommerce">
+            <div class="preview-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Full Stack</span>
+            <h3>E-Commerce Web Application</h3>
+            <p>Full-stack MERN platform with secure authentication, product management, and REST APIs for reliable analytics.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Express</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/samrakshanadhikari/ecom-app-demo" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="https://ecom-app-demo-frontend.onrender.com" target="_blank" class="btn btn-small btn-outline">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
 
-  <footer>
-    Contact me at: <a href="mailto:nbb38@txstate.edu">nbb38@txstate.edu</a>
+        <!-- Bookstore Project -->
+        <div class="project-card">
+          <div class="project-preview bookstore">
+            <div class="preview-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3>Interactive Bookstore</h3>
+            <p>A beautiful, interactive bookstore featuring my favorite literary works with modern UI and cart functionality.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/samrakshanadhikari/bookstore-app" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="book.html" target="_blank" class="btn btn-small btn-outline">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Programming</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js"></i>
+              <span>JavaScript/TS</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>SQL</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-copyright"></i>
+              <span>C++/Java</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>ML/AI</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fas fa-bolt"></i>
+              <span>PyTorch</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-fire"></i>
+              <span>TensorFlow</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-robot"></i>
+              <span>LLMs</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cogs"></i>
+              <span>Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <h3>Web Dev</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-react"></i>
+              <span>React/Next.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-server"></i>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Tools & Cloud</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-docker"></i>
+              <span>Docker</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git/GitHub</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-aws"></i>
+              <span>AWS/GCP</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-sync"></i>
+              <span>CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p class="contact-lead">I'm always open to discussing new projects, research collaborations, or opportunities to create impact through AI and technology.</p>
+          <div class="contact-methods">
+            <a href="mailto:samrakshanadhikari@gmail.com" class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">Email</span>
+                <span class="method-value">samrakshanadhikari@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:737-388-9882" class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">Phone</span>
+                <span class="method-value">737-388-9882</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/samrakshyan-adhikari-625473269/" target="_blank" class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">LinkedIn</span>
+                <span class="method-value">Connect with me</span>
+              </div>
+            </a>
+            <a href="https://github.com/samrakshanadhikari" target="_blank" class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="method-info">
+                <span class="method-label">GitHub</span>
+                <span class="method-value">View my repos</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Samrakshyan Adhikari. Crafted with <i class="fas fa-heart"></i> and code.</p>
+        <div class="footer-links">
+          <a href="#home">Back to Top</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
-    let images = [
+    // Typing Animation
+    const texts = ['AI Research Fellow', 'ML Engineer', 'Full Stack Developer', 'Problem Solver', 'Book Lover'];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typingText');
+
+    function type() {
+      const currentText = texts[textIndex];
+      
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        setTimeout(() => isDeleting = true, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+      }
+
+      const speed = isDeleting ? 50 : 100;
+      setTimeout(type, speed);
+    }
+    type();
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.querySelector('.nav-links');
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenuBtn.classList.toggle('active');
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      const icon = themeToggle.querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+
+    // Animate stats on scroll
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = entry.target.querySelectorAll('.stat-number');
+          statNumbers.forEach(stat => {
+            const target = parseFloat(stat.dataset.count);
+            const isDecimal = target % 1 !== 0;
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                stat.textContent = isDecimal ? target.toFixed(1) : target;
+                clearInterval(timer);
+              } else {
+                stat.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+              }
+            }, 30);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const aboutSection = document.querySelector('.about-stats');
+    if (aboutSection) statsObserver.observe(aboutSection);
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.project-card, .skill-category, .contact-method, .education-card, .experience-card');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Image rotation (keeping original functionality)
+    const images = [
       "462963360_1992908311145937_1340848373130107651_n (1).jpg", 
       "https://cdn.shopify.com/s/files/1/0047/4231/6066/files/The_Scream_by_Edvard_Munch_1893_800x.png"
     ];
-
-    let currentIndex = 0;
+    let currentImageIndex = 0;
 
     function changeImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      document.getElementById('heroImage').src = images[currentIndex];
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      const heroImg = document.getElementById('heroImage');
+      heroImg.style.opacity = '0';
+      setTimeout(() => {
+        heroImg.src = images[currentImageIndex];
+        heroImg.style.opacity = '1';
+      }, 300);
     }
-
     setInterval(changeImage, 5000);
+
+    // Detect if running locally (file:// protocol) and show thumbnail instead of iframe
+    if (window.location.protocol === 'file:') {
+      const projectMedia = document.querySelector('.project-media');
+      if (projectMedia) {
+        projectMedia.classList.add('show-thumbnail');
+      }
+    }
   </script>
 </body>
 </html>
